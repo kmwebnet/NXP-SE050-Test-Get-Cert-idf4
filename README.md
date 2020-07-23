@@ -1,6 +1,7 @@
 # NXP SE050 Test-Get-Cert-idf4
 
 This communicates NXP SE050 secure chip from ESP32 and extract a certificate pre-provisioned by NXP.
+it's protected i2c transmission by PlatformSCP03 keys.  
 
 # Requirements
 
@@ -22,6 +23,9 @@ This communicates NXP SE050 secure chip from ESP32 and extract a certificate pre
           
   NXP SE050(on I2C port 1)  
 
+  if you use other variants you need to change ENC, MAC, DEK key definition on components/se050/ex_sss_auth.h     
+  Never use this code as production unless you change 3 keys to your own.  
+  
 # Usage
 
 "git clone --recursive " on your target directory. 
